@@ -23,7 +23,7 @@ RUN apt-get update \
       gpg --batch --verify /tini.asc /tini \
     && chmod +x /tini  
 
-FROM nvidia/opencl:runtime-ubuntu18.04
+FROM kd6kxr/docker-opencl
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -56,4 +56,4 @@ EXPOSE 7396 7396
 USER fah
 
 ENTRYPOINT ["/bin/tini", "--", "/usr/bin/FAHClient", "--web-allow=0/0:7396", "--allow=0/0:7396", "--smp=true"]
-CMD ["--user=Anonymous", "--team=240110", "--power=full", "--gpu-usage=100", "--cpu-usage=100"]
+CMD ["--user=anonymous", "--team=243401", "--power=full", "--gpu-usage=100", "--cpu-usage=100"]
