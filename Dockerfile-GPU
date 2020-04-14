@@ -47,7 +47,7 @@ RUN mkdir -p /usr/share/doc/fahclient/ \
       ocl-icd-opencl-dev xserver-xorg-video-amdgpu xserver-xorg-video-radeon ocl-icd-libopencl1 nano\
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends gnupg curl && \
   curl -sL http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | apt-key add - && \
-  sh -c 'echo deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ bionic main > /etc/apt/sources.list.d/rocm.list' && \
+  sh -c 'echo deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main > /etc/apt/sources.list.d/rocm.list' && \
   apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
   sudo \
   libelf1 \
