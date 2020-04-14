@@ -44,12 +44,12 @@ RUN mkdir -p /usr/share/doc/fahclient/ \
     && touch /usr/share/doc/fahclient/sample-config.xml \
     && apt-get update \
     && apt-get install --no-install-recommends -y \
-      ocl-icd-opencl-dev \
+      ocl-icd-opencl-dev nano\
     && apt-get clean autoclean \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/ /var/lib/dpkg/ /var/lib/cache/ /var/lib/log/ \
     && groupadd -r fah \
-    && useradd -r -g fah fah \
+    && useradd -r -g fah fah && adduser fah video \
     && chown -R fah /app
 
 EXPOSE 7396 7396
