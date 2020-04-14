@@ -55,5 +55,6 @@ RUN mkdir -p /usr/share/doc/fahclient/ \
 EXPOSE 7396 7396
 USER fah
 
-ENTRYPOINT ["/bin/tini", "--", "/usr/bin/FAHClient", "--web-allow=0/0:7396", "--allow=0/0:7396", "--smp=true"]
-CMD ["--user=anonymous", "--team=243401", "--power=full", "--gpu-usage=100", "--cpu-usage=100"]
+# ENTRYPOINT ["/bin/tini", "--", "/usr/bin/FAHClient", "--web-allow=0/0:7396", "--allow=0/0:7396", "--smp=true"]
+# CMD ["--user=anonymous", "--team=243401", "--power=full", "--gpu-usage=100", "--cpu-usage=100"]
+ENTRYPOINT ["/bin/bash"]
