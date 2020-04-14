@@ -44,7 +44,7 @@ RUN mkdir -p /usr/share/doc/fahclient/ \
     && touch /usr/share/doc/fahclient/sample-config.xml \
     && apt-get update \
     && apt-get install --no-install-recommends -y \
-      ocl-icd-opencl-dev nano\
+      ocl-icd-opencl-dev xserver-xorg-video-amdgpu xserver-xorg-video-radeon ocl-icd-libopencl1 nano\
     && apt-get clean autoclean \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/ /var/lib/dpkg/ /var/lib/cache/ /var/lib/log/ \
